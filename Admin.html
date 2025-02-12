@@ -28,10 +28,13 @@
                 .enter()
                 .append("div")
                 .attr("id",d=>"etu"+d["Votre identifiant omeka"]);
-            
+           
             divEtu.append("h2").text(function(d) { return d["Votre nom et prénom"]; });
             divEtu.append("a").attr("href",d=>"https://"+d["Votre login github"]+".github.io/GSI2_SystemInfo_24-25/")
                 .text(d=>d["Votre login github"]+ " page Web")
+            divEtu.append('br')
+            divEtu.append("a").attr("href",d=>"https://"+d["Votre login github"]+".github.io/GSI2_SystemInfo_24-25/arguments.html")
+                .text(d=>d["Votre login github"]+ " page arguments")
             divEtu.append('br')
             divEtu.append("a").attr("href",d=>"https://github.com/"+d["Votre login github"]+"/GSI2_SystemInfo_24-25/")
                 .text(d=>d["Votre login github"]+ " sources")
@@ -99,7 +102,7 @@
                     //affiche le description choisie
                     d3.select('#'+d.idSpan).attr("class","gen").text(choixDesc['@value']);
                 });
-        }         
+        }        
 
     </script>
 </body>
